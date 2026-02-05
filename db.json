@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": "0001",
+      "name": "Admin",
+      "email": "stevenpat27@gmail.com",
+      "password": "123456",
+      "role": "admin"
+    },
+    {
+      "id": "c927",
+      "name": "Prueba",
+      "email": "prueba@hotmail.com",
+      "password": "123456",
+      "role": "user"
+    }
+  ],
+  "proyects": [
+    {
+      "id": "",
+      "title": "",
+      "description": "",
+      "ownerId": ""
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1234",
+      "title": "Prueba",
+      "description": "Esto es una prueba",
+      "status": "complete",
+      "priority": "low",
+      "dueDate": "03-02-2026",
+      "proyectId": "a31s",
+      "assignedTo": "Prueba"
+    },
+    {
+      "id": "bc2a",
+      "title": "Segunda prueba",
+      "description": "aaaaaaa",
+      "status": "in-progress",
+      "priority": "medium",
+      "dueDate": "2026-01-26",
+      "proyectId": "default",
+      "assignedTo": "Admin",
+      "category": "computer-science"
+    }
+  ]
+}

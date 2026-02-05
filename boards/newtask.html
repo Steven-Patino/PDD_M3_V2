@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new task</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+    <div>
+        <p class="text-left"><a class="text-gray-500 hover:font-bold" href="dashboard.html">← Back To Tasks/ </a><a class="font-bold"> Create New</a></p>
+        <h2 class="text-4xl font-bold mb-6">Create New Task</h2>
+
+        <form class="bg-white p-8 rounded-xl shadow-md w-full max-w-lg">
+            <label for="task-title" class="font-bold">Task title</label>
+            <input id="task-title" type="text" placeholder="e.g., Complete Quarter 3 Report"
+            class="w-full mb-4 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+            <div class="flex gap-6 w-full">
+                <div class="flex flex-col">
+                    <label for="category" class="font-bold">Category</label>
+                    <select id="category" class="bg-white border rounded-lg py-3 px-4">
+                        <option selected>Select category...</option>
+                        <option value="mathematic">Mathematic</option>
+                        <option value="physics">Physics</option>
+                        <option value="history">History</option>
+                        <option value="computer-science">Computer science</option>
+                        <option value="literature">Literature</option> 
+                    </select>
+                </div>
+                <div class="flex flex-col">
+                    <label for="priority" class="font-bold">Priority</label>
+                    <select id="priority" class="bg-white border rounded-lg py-3 px-4">
+                        <option selected>Select priority...</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">high</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="flex gap-6 w-full mt-6">
+                <div class="flex flex-col">
+                    <label for="status" class="font-bold">Status</label>
+                    <select id="status" class="bg-white border rounded-lg py-3 px-4">
+                        <option selected>Select Status...</option>
+                        <option value="completed">Completed</option>
+                        <option value="in-progress">In progress</option>
+                        <option value="pending">Pending</option>
+                    </select>
+                </div>
+                <div class="flex flex-col">
+                    <label for="due-date" class="font-bold">Due date</label>
+                    <input id="due-date" type="date" placeholder="e.g., Complete Quarter 3 Report"
+                    class="bg-white border rounded-lg py-3 px-4">
+                </div>
+            </div>
+
+            <label for="details" class="font-bold mt-6">Description</label>
+            <textarea id="details" class="w-full bg-white border rounded-lg pb-12" placeholder="Add details about the task...">
+            </textarea>
+
+            <div class="mt-6 flex justify-end gap-3">
+                <button type="reset" class="bg-white border rounded-lg py-3 px-4 hover:bg-gray-100 transition">
+                    Cancel
+                </button>
+            <button type="button" onclick="createTask(event)">
+            💾 Save Task
+            </button>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/create-task.js"></script> 
+</body>
+</html>

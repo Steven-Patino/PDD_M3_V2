@@ -169,5 +169,3 @@ Open `index.html` in your browser.
 
 This project is open for educational use.
 
-
-

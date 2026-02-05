@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>MyTasks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <div class="flex min-h-screen">
+
+      <!-- Sidebar -->
+      <aside class="w-64 bg-white text-grey-300 hidden md:block">
+        <img src="/images/crudzaso.png" class="m-6">
+        <nav class="space-y-2 px-4 text-gray-500">
+          <a href="/boards/dashboard.html" class="block px-4 py-2 rounded hover:bg-blue-200">Dashboard</a>
+          <a class="block px-4 py-2 rounded bg-blue-100 text-blue-600 ">✅ My task</a>
+          <a class="block px-4 py-2 rounded hover:bg-blue-200">👤 Profile</a>
+        </nav>
+      </aside>
+
+      <!-- Main -->
+      <div class="flex-1 flex flex-col">
+
+        <!-- Navbar -->
+        <header class="bg-white shadow p-4 flex justify-between items-center">
+          <h1 class="text-xl font-semibold">Dashboard</h1>
+          <button id="logoutBtn" class="bg-red-600 text-white px-4 py-2 rounded">
+            LogOut
+          </button>
+        </header>
+
+        <!-- Content -->
+        <main class="p-6 space-y-6">
+
+          <section class="flex justify-between items-center pb-6">
+            <div><h2 class="text-4xl font-bold">Task Manager</h2>
+            <h3 class="text-gray-500 text-xl">Overview of your content academic performance task</h3>
+          </div>
+          <a href="newtask.html">        
+            <button href="newtask.html" class="text-white bg-blue-600 px-4 py-2 rounded">
+            + New task
+          </button>  </a>
+
+          </section>
+
+          <!-- Stats -->
+          <section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="bg-white p-4 rounded-xl shadow">
+              <p class="text-gray-500">Total tasks</p>
+              <p class="text-2xl font-bold">120</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow">
+              <p class="text-gray-500">Completed</p>
+              <p class="text-2xl font-bold">45</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow">
+              <p class="text-gray-500">Pending</p>
+              <p class="text-2xl font-bold">$8,500</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow">
+              <p class="text-gray-500">Overall progress</p>
+              <p class="text-2xl font-bold">7</p>
+            </div>
+          </section>
+
+          <!-- Table -->
+          <section class="bg-white rounded-xl shadow overflow-x-auto">
+            <table class="w-full text-left">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th class="p-3 items-center">
+                    <input type="checkbox" >
+                  </th>
+                  <th class="p-3">Task name</th>
+                  <th class="p-3">Category</th>
+                  <th class="p-3">Priority</th>
+                  <th class="p-3">Status</th>
+                </tr>
+              </thead>
+              <tbody id="task-list">
+
+              </tbody>
+            </table>
+          </section>
+
+        </main>
+      </div>
+    </div>
+
+    <script src="/js/guard.js" defer></script>
+    <script src="/js/auth.js" defer></script>
+    <script src="/js/render-mytasks.js"></script>
+</body>
+</html>
