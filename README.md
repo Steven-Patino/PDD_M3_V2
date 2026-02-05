@@ -33,14 +33,19 @@ project-root/
 ├── index.html
 │
 ├── boards/
-│   ├── login.html      # Login page
+│   ├── login.html        # Login page
 │   ├── register.html     # register page
-│   └── dashboard.html    # Admin dashboard to control all the program
+│   |── dashboard.html    # Admin dashboard to control all the program
+│   |── newtask.html      # Page when i can create new task
+│   └── mytask.html       # Page when i can see task of the current user 
 |
 ├── js/
-│   ├── auth.js      # Login, register, logout logic
-│   ├── guard.js     # Session and route protection
-│   └── events.js    # Event CRUD and UI logic
+│   ├── auth.js               # Login, register, logout logic
+│   ├── guard.js              # Session and route protection
+│   |── render-dashboard.js   # Logic behind the render of the dashboard
+│   |── render-dashboard.js   # Logic behind the render of the mytask
+│   └── createtask.js         # Logic behind the creation of new task
+
 │
 └── db.json          # JSON Server database
 ```
@@ -163,4 +168,6 @@ Open `index.html` in your browser.
 ## 📄 License
 
 This project is open for educational use.
+
+
 
